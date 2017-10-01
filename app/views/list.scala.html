@@ -1,0 +1,41 @@
+@(productsUI: Seq[model.ui.ProductUI])
+
+@*
+ * Call the `main` template with two arguments. The first
+ * argument is a `String` with the title of the page, the second
+ * argument is an `Html` object containing the body of the page.
+ *@
+@main("Product List") {
+
+    <h1>Product List</h1>
+
+    <table class="table table-responsive table-bordered table-striped">
+        <thead class="thead-inverse">
+        <tr>
+            <th>Code</th>
+            <th>Category</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        @if(productsUI.isEmpty){
+            <td colspan="5" class="text-center">No data to display</td>
+        }
+        @productsUI.map{productUI =>
+            <tr>
+                <td>@productUI.code</td>
+                <td>@productUI.category</td>
+                <td>@productUI.name</td>
+                <td>@productUI.price</td>
+                <td class="text-center"><a href="@routes.ProductViewController.editProduct(productUI.id.get.toLong)" class="link-no-style"><span class="oi oi-pencil"></span></a></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+    <a class="btn btn-outline-primary float-right btn-outline-primary-custom" href="@routes.ProductViewController.createProduct" role="button">Add Product</a>
+
+
+}

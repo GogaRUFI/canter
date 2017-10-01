@@ -1,0 +1,61 @@
+@import helper._
+
+@main("Create Product") {
+
+<h1>Create Product</h1>
+
+<form class="form-custom" id="createProductForm">
+    <div class="alert alert-danger collapse" id="errors" role="alert"></div>
+    <div class="alert alert-success collapse" id="success" role="alert"></div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <img src="@routes.Assets.versioned("images/200x200.png")" class="form-img" alt="Cheese">
+                    <label class="custom-file">
+                        <input type="file" id="file2" class="custom-file-input">
+                        <span class="custom-file-control"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="inputCode" class="col-form-label">Code</label>
+                    <input type="text" class="form-control" id="inputCode" name="code" placeholder="Code">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="inputName" class="col-form-label">Name</label>
+                    <input type="text" class="form-control" id="inputName" name="name" placeholder="Name">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCategory" class="col-form-label">Category</label>
+                    <input type="text" class="form-control" id="inputCategory" name="category" placeholder="Category">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPrice" class="col-form-label">Price</label>
+                    <input type="text" class="form-control" id="inputPrice" name="price" placeholder="Price">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row form-control-row">
+        <div class="col-sm-12">
+            <div class="float-right">
+                <a class="btn btn-outline-secondary" href="@routes.ProductViewController.productsList" role="button">
+                    Go To List
+                </a>
+                <button type="submit" id="createProductSubmit" class="btn btn-outline-primary btn-outline-primary-custom">
+                    Submit
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+
+}

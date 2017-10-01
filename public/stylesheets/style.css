@@ -1,0 +1,98 @@
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  min-height: 75rem;
+  padding-top: 3.55rem;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  text-align: center;
+}
+
+body .content {
+    padding-bottom: 200px;
+}
+
+body .content h1 {
+   text-transform: uppercase;
+   font-weight: normal;
+   margin-bottom: 1.2em;
+   font-size: 1.6rem;
+}
+
+
+.btn-outline-primary-custom {
+   color: #8c1281;
+   border-color: #8c1281;
+}
+
+.btn-outline-primary-custom:hover {
+   background-color: #8c1281;
+   border-color: #8c1281;
+}
+
+.thead-inverse th {
+  background-color: #8c1281;
+}
+
+.link-no-style {
+    text-decoration: none;
+    color: black;
+}
+
+.link-no-style:hover {
+    text-decoration: none;
+    color: black;
+}
+
+
+.form-img {
+  margin-bottom: 1rem;
+}
+
+.form-control-row {
+  margin-top: 1rem;
+}
+
+.navbar-custom {
+  background-color: #8c1281!important;
+  border-bottom: 1px solid #7b0f72;
+}
+
+.navbar-custom .navbar-toggler {
+  border-color: #7b0f72;
+}
+
+
+.jumbotron {
+  color: white;
+  background-color: #8c1281!important;
+  margin-bottom: 5em;
+  border-top: 1px solid #9a148f;
+}
+
+.jumbotron h1 {
+  font-size: 4.5rem;
+}
+
+.jumbotron h4 {
+  padding-left: 6px;
+  font-weight: normal;
+}
+
+
+.form-custom .form-control:focus {
+    border-color: #8c1281;
+}

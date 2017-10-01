@@ -1,0 +1,73 @@
+@(productUI: model.ui.ProductUI)
+
+@*
+* Call the `main` template with two arguments. The first
+* argument is a `String` with the title of the page, the second
+* argument is an `Html` object containing the body of the page.
+*@
+@main("Edit Product") {
+
+<h1>Edit Product</h1>
+
+<form class="form-custom" id="editProductForm">
+    <div class="alert alert-danger collapse" id="errors" role="alert"></div>
+    <div class="alert alert-success collapse" id="success" role="alert"></div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <img src="@routes.Assets.versioned("images/200x200.png")" class="form-img" alt="Cheese">
+                    <label class="custom-file">
+                        <input type="file" id="file2" class="custom-file-input">
+                        <span class="custom-file-control"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <input type="hidden" class="form-control" id="inputId" name="id" value="@productUI.id.get">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="inputCode" class="col-form-label">Code</label>
+                    <input type="text" class="form-control" id="inputCode" placeholder="Code" name="code"
+                           value="@productUI.code">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="inputName" class="col-form-label">Name</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Name" name="name"
+                           value="@productUI.name">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCategory" class="col-form-label">Category</label>
+                    <input type="text" class="form-control" id="inputCategory" placeholder="Category" name="category"
+                           value="@productUI.category">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPrice" class="col-form-label">Price</label>
+                    <input type="text" class="form-control" id="inputPrice" placeholder="Price" name="price"
+                           value="@productUI.price">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row form-control-row">
+        <div class="col-sm-12">
+            <a class="btn btn-outline-danger" id="deleteProductButton" href="#" role="button">Delete</a>
+
+            <div class="float-right">
+                <a class="btn btn-outline-secondary" href="@routes.ProductViewController.productsList" role="button">
+                    Go To List
+                </a>
+                <button type="submit" id="editProductSubmit" class="btn btn-outline-primary btn-outline-primary-custom">
+                    Save
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+
+}
