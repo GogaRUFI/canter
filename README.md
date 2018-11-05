@@ -1,2 +1,1 @@
-# canter
-Sample app.
+
